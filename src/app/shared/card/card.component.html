@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+    <mat-card-header>
+    <div mat-card-avatar class="example-header-image" [style]="{'background-image': 'url(https://ui-avatars.com/api/?name=Teo&background=Ffa500&color=fff&length=1)'}"></div>
+      <mat-card-title>{{lead.name}}</mat-card-title>
+      <mat-card-subtitle >
+        {{ lead.created | date:'MMMM d &#64; h:mm a' }}      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+    <mat-divider></mat-divider>
+    <div class="job-info">
+        <span class="icon-text"><mat-icon>pin_drop</mat-icon>{{lead.suburb}}</span>
+        <span class="icon-text"><mat-icon>business_center</mat-icon>{{lead.category}}</span>
+        <span>Job ID: {{lead.id}}</span>
+        <span *ngIf="type == 'accepted'"> ${{lead.price}} Lead Invitation</span>
+      </div>
+    <mat-divider></mat-divider>
+      <div class="job-info" *ngIf="type == 'accepted'">
+        <span class="icon-text"><mat-icon>call</mat-icon>{{lead.phone}}</span>
+        <span class="icon-text"><mat-icon>mail</mat-icon>{{lead.email}}</span>
+      </div>
+      <div style="margin-top: 5px;">
+        <p>
+            {{lead.description}}
+          </p>
+      </div>
+      <mat-divider *ngIf="type == 'invited'"></mat-divider>
+    </mat-card-content>
+    <mat-card-actions *ngIf="type == 'invited'">
+        <button mat-raised-button color="warn" > Accept </button>
+        <button mat-raised-button> Decline </button>
+        <span style="margin-left: 5px;">
+            <strong>${{lead.price}}</strong> Lead Invitation
+        </span>
+    </mat-card-actions>
+  </mat-card>

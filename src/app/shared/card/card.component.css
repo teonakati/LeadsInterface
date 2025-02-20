@@ -1,0 +1,49 @@
+.example-card {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  
+  .job-info {
+    display: flex;
+    gap: 10px;
+    color: #555;
+    font-size: 14px;
+  }
+
+  .example-button-row button,
+    .example-button-row a {
+    margin-right: 8px;
+    }
+
+    mat-icon {
+        font-size: 22px;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        vertical-align: middle;
+        margin-right: 6px;
+      }
+
+      mat-divider {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+  mat-card {
+    background-color: rgba(255, 255, 255, 0.584);
+  }
+
+  mat-card-subtitle{
+    color: grey;
+  }
+
+  button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
